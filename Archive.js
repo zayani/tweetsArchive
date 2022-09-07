@@ -45,7 +45,7 @@ var loadtweets = (len = tweets_per_files, waitms = 1500) => {
 				tweetId: t.querySelectorAll('a')[3].href.split('status/')[1],
 				handle: t.querySelectorAll('a')[2].innerText,
 				name: t.querySelectorAll('a')[1].innerText,
-				text: [...t.querySelectorAll('[data-testid]')][1].innerText,
+				text: t.querySelector('[lang]').innerText,
 				time: t.querySelectorAll('[datetime]')[0].getAttribute('datetime')
 			});
 
